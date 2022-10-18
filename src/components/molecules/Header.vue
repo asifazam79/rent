@@ -1,49 +1,290 @@
 <template>
-  <div class="header">
-    <div class="headWrapper">
-      <div class="logo">
-        <a href="/">
-          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5165 856">
-            <path class="cls-1" d="M352.78,0C620.57,0,797.25,170,797.25,428S620.57,856,352.78,856H0V0ZM170.56,159.59V696.41H350.93c180.37,0,267.8-113.11,267.8-268.41,0-157.12-87.43-268.41-267.8-268.41Z"/>
-            <path class="cls-1" d="M1281.88,260.47,1258,418.84c-26.28-11.63-64.22-19-96.63-19-74,0-124.71,45.26-124.71,133.3V856H877.13V263.54h154.68v64.82c37.29-55.66,94.15-80.73,166.88-80.73C1232.94,247.63,1259.88,252.53,1281.88,260.47Z"/>
-            <path class="cls-2" d="M1722.78,0c267.79,0,444.48,170,444.48,428s-176.69,428-444.48,428H1370V0ZM1540.57,159.59V696.41h180.37c180.37,0,267.79-113.11,267.79-268.41,0-157.12-87.42-268.41-267.79-268.41Z"/>
-            <path class="cls-2" d="M2853.69,544.17c0,178.53-136.31,311.83-321,311.83C2348.68,856,2213,722.7,2213,544.17s135.72-311.82,319.77-311.82C2717.38,232.35,2853.69,365.64,2853.69,544.17Zm-478.13,0c0,96,67.26,163.25,157.17,163.25s157.72-67.24,157.72-163.25-67.86-163.24-157.72-163.24S2375.56,448.19,2375.56,544.17Z"/>
-            <path class="cls-2" d="M3468.23,344.24l-115,96c-36.09-38.54-74.58-59.32-126.55-59.32-82.54,0-148.61,64.82-148.61,163.24,0,99.05,65.47,163.25,148,163.25,51.33,0,95.34-23.23,129-59.92l113.71,97.23C3413.21,816.27,3330,856,3231,856c-188.93,0-315.49-132-315.49-311.83,0-179.15,126.56-311.82,315.49-311.82C3330,232.35,3413.81,272.7,3468.23,344.24Z"/>
-            <path class="cls-2" d="M3997.78,390.09H3783.21V606.55c0,74,39.13,100.87,88.62,100.87,37.93,0,78.91-18.95,111.32-38.51l58.64,124.73C3989.87,829.09,3929.93,856,3845.54,856c-146.71,0-221.94-83.14-221.94-236.63V390.09H3509.3V248.25h114.3V72.16h159.61V248.25h214.57Z"/>
-            <path class="cls-2" d="M4690.41,544.17c0,178.53-136.32,311.83-321,311.83-184,0-319.76-133.3-319.76-311.83s135.71-311.82,319.76-311.82C4554.09,232.35,4690.41,365.64,4690.41,544.17Zm-478.14,0c0,96,67.26,163.25,157.17,163.25s157.72-67.24,157.72-163.25-67.86-163.24-157.72-163.24S4212.27,448.19,4212.27,544.17Z"/>
-            <path class="cls-2" d="M5165.8,260.47,5142,418.84c-26.29-11.63-64.23-19-96.64-19-74,0-124.71,45.26-124.71,133.3V856H4761.05V263.54h154.68v64.82c37.29-55.66,94.15-80.73,166.88-80.73C5116.86,247.63,5143.8,252.53,5165.8,260.47Z"/>
-          </svg>
+  <div>
+    <div class="header">
+      <div class="headWrapper">
+        <a href="/" class="header-logo">
+          <span class="logo-icon">
+            <img class="OpenRentLogoSpinner white" src="//d10hbub4nkludc.cloudfront.net/images/white-logo-parts/logo-arrows2__white.png" alt="">
+          </span>
+          <img class="OpenRentLogo white" src="//d10hbub4nkludc.cloudfront.net/images/white-logo-parts/logo-text__white.png" alt="OpenRent">
         </a>
+        <ul class="large-nav-list">
+          <li class="has-sub" @mouseenter="showNavMenu($event.target)" @mouseleave="hideNavMenu($event.target)">
+            <a href="/about">About <i class="fa fa-chevron-down"></i></a>
+            <div class="sub-nav">
+              <div id="about-nav" class="nav-image"></div>
+              <ul> 
+                <div class="col">              
+                  <li><a href="/landlords-advertise-property-for-rent-on-rightmove-and-zoopla">Landlords</a></li>
+                  <li><a href="/find-property-to-rent-from-private-landlords">Tenants</a></li>
+                  <li><a href="/about">OpenRent</a></li>
+                </div> 
+              </ul>
+            </div>
+          </li>
+          <li class="has-sub" @mouseenter="showNavMenu($event.target)" @mouseleave="hideNavMenu($event.target)">
+            <a href="/our-pricing">Pricing &amp; Services <i class="fa fa-chevron-down"></i></a>
+            <div class="sub-nav pricing-services-sub">
+              <div id="price-nav" class="nav-image"></div>
+              <ul>
+                <div class="col">
+                  <strong>Packages</strong>
+                  <li><a href="/landlords-advertise-property-for-rent-on-rightmove-and-zoopla">Property Advertising</a></li>
+                  <li><a href="/rent-now">Full Tenancy Creation</a></li>
+                  <li><a href="/our-pricing">See All Pricing</a></li>
+                </div>
+                <div class="col">
+                  <strong>Services</strong>
+                  <li><a href="/tenant-referencing">Tenant Referencing</a></li>
+                  <li><a href="/gas-safety-certificate-cp12">Gas Safety</a></li>
+                  <li><a href="/landlord-energy-performance-certificates-epc">EPC</a></li>
+                  <li><a href="/landlord-electrical-safety-certificates-eicr-pat-testing">Electrical Safety</a></li>
+                  <li><a href="/rentcollection/about">Rent Collection</a></li>
+                </div>
+                <div class="col">
+                  <li><a href="/landlord-inventory-and-check-in-services">Inventory</a></li>
+                  <li><a href="/professional-photography-for-landlords">Photos &amp; Floor Plans</a></li>
+                  <li><a href="/landlord-rent-guarantee-insurance">Rent Insurance</a></li>
+                  <li><a href="/landlord-building-and-contents-insurance">Building Insurance</a></li>
+                  <li><a href="/accompanied-viewings">Accompanied Viewings</a></li>
+                  <li><a href="/landlord-legal-and-eviction-support">Legal Support</a></li>
+                  <li><span class="tenant-price-note"><i class="fa fa-check-circle"></i>Tenants Don't Pay Admin Fees</span></li>
+                </div>
+              </ul>
+            </div>
+          </li>
+          <li class="add-listing-cta"><a href="/listing/add" class="btn btn-success"><strong>+</strong> Add Listing</a></li>
+          <li class="log-on-cta"><a id="signInWidgetFallBackButton" href="/account/simplelogon" class="sign-in-btn"><span><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</span></a></li>
+        </ul>
+        <div class="titleBox banda">
+          <h1 id="titleBoxText">Renting the way it should be</h1>
+          <h3>The destination for finding, advertising, and managing rental property</h3>
+          <form action="/search/searchbydistance" id="search_by_location_form" method="get">    
+            <div id="searchBoxContainer">
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button id="mylocation1" class="mylocation btn btn-secondary" type="button" title="Houses and Flats to Rent Near Me">
+                    <i class="fa fa-map-marker fa-2x" style="color: #9B9B9B;"></i>
+                    <img class="loadingLocation" src="//d10hbub4nkludc.cloudfront.net/images/loadingSpinner.gif" style="display:none;" width="14" height="14" alt="loading...">
+                  </button>
+                </span>
+                <input id="searchBox" name="searchBox" type="text" value="" class="form-control ui-autocomplete-input" placeholder="Where do you want to live?" autocomplete="off">
+                <input id="lng" name="lng" type="hidden" value="">
+                <input id="lat" name="lat" type="hidden" value="">
+                <input id="within" name="within" type="hidden" value="">
+                <span class="input-group-btn">
+                  <button id="embeddedSearchBtn" type="submit" value="Search" class="btn btn-primary banda">
+                    <span class="searchText">Search  </span>
+                    <span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
+    </div>
+    <div class="header-tagline">
+      <h2>5.0 million Tenants and Landlords <i class="fa fa-heart"></i> OpenRent</h2>
+      <span>Scroll down to find out why <i class="fa fa-angle-double-down"></i></span>
     </div>
   </div>
 </template>
   
 <script>
 export default {
-    name: "appHeader"
+    name: "appHeader",
+    methods: {
+      showNavMenu(e) {
+        e.querySelector('.sub-nav').style.display = 'block';
+      }, 
+      hideNavMenu(e) {
+        e.querySelector('.sub-nav').style.display = 'none';
+      }
+    }
 };
 </script>
 <style scoped>
-  .cls-1 {
-    fill:#46be69;
-  }
-  .cls-2{
-    fill:#107433;
-  }
   .header {
-    border-bottom: 5px solid #CCC;
+    background-color: #56545C;
     width: 100%;
-    min-height: 80px;
+    min-height: 400px;
+    background: url(../../assets/BannerImage.jpg) no-repeat left -140px;
   }
   .header .headWrapper {
     margin: 0 auto;
     max-width: 1024px;
     padding: 0 20px;
+    text-align: left;
   }
-  .header .logo {
-    width: 150px;
-    min-height: 80px;
-    line-height: 5em;
+  .header-logo {
+    width: auto;
+    min-height: 35px;
+  }
+  .header-logo img {
+    max-height: 35px;
+    position: relative;
+    top: 3px;
+  }
+  .logo-icon img {
+    max-height: 25px;
+    padding-right: 5px;
+    position: relative;
+    top: -3px;
+  }
+  #about-nav {
+    background: url(../../assets/aboutImg.jpg) no-repeat left center;
+  }
+  #price-nav {
+    background: url(../../assets/PricingImg.jpg) no-repeat left center;
+  }
+  .large-nav-list {
+    float: right;
+    color: #FFF;
+    padding-left: 0;
+    margin: 0;
+  }
+  .large-nav-list > li {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  .large-nav-list > li > a {
+    color: #FFF;
+    padding: 3px 15px;
+    margin: 10px 0;
+    display: block;
+    font-size: 0.9em;
+  }
+  .add-listing-cta {
+    margin-left: 40px !important;
+  }
+  .log-on-cta {
+    margin-left: 5px !important;
+  }
+  .log-on-cta a {
+    background-color: #5cb85c;
+    border-radius: 4px;
+  }
+  .log-on-cta a:hover {
+    text-decoration: none !important;
+    background-color: #449d44;
+  }
+  a.btn-success {
+    border-radius: 4px;
+    background-color: #1083E5;
+  }
+  a.btn-success:hover {
+    text-decoration: none !important;
+    background-color: #3272a9;
+  }
+  .large-nav-list > li > a:hover {
+    text-decoration: underline;
+  }
+  .large-nav-list li {
+    list-style-type: none;
+  }
+  .large-nav-list li a {
+    text-decoration: none;
+  }
+  .sub-nav {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 100;
+  }
+  .sub-nav .nav-image {
+    width: 50%;
+    min-height: 230px;
+    float: left;
+    background-color: #999;
+  }
+  .sub-nav ul {
+    padding: 20px;
+    width: calc(50% - 40px);
+    float: right;
+    background-color: #FFF;
+    min-height: 190px;
+  }
+  .sub-nav .col {
+    float: left;
+    padding-right: 30px;
+  }
+  .sub-nav strong {
+    color: #585858;
+    float: left;
+    margin-bottom: 10px;
+    padding-left: 8px;
+  }
+  .sub-nav li {
+    clear: both;
+    padding-bottom: 5px;
+  }
+  .sub-nav a {
+    font-weight: normal;
+    color: #585858;
+    font-size: 0.9em;
+    border-left: 3px solid #FFF;
+    padding-left: 5px;
+  }
+  .sub-nav a:hover {
+    border-left: 3px solid #0B5Da3;
+    text-decoration: underline;
+  }
+  .sub-nav ul li span {
+    background-color: #EEE;
+    color: #585858;
+    font-size: 0.9em;
+    font-style: italic;
+    padding: 5px;
+  }
+  .header-tagline {
+    float: left;
+    width: 100%;
+    background-color: #303441;
+    color: #FFF;
+    padding: 20px 0;
+  }
+  .header-tagline h2 {
+    margin-top: 0;
+    padding: 0;
+  }
+  .fa-heart {
+    font-size: 24px;
+    color: red;
+  }
+  .fa-check-circle {
+    color: #5CB85C;
+  }
+  .titleBox {
+    margin-top: 70px;
+    color: #FFF;
+    text-align: center;
+  }
+  #searchBox { 
+    padding: 15px 20px 15px 45px;
+    border-radius: 30px 0 0 30px;
+    border-color: transparent;
+    width: 50%;
+  }
+  #mylocation1 {
+    border-radius: 15px;
+    border-color: transparent;
+    position: relative;
+    left: 42px;
+    top: 5px;
+    cursor: pointer;
+  }
+  #embeddedSearchBtn {
+    padding: 15px;
+    background-color: #1083E5;
+    color: #FFF;
+    border-radius: 0 30px 30px 0;
+    border-color: transparent;
+    cursor: pointer;
+  }
+  #embeddedSearchBtn:hover {
+    background-color: #3272a9;
   }
 </style>
